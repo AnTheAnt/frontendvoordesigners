@@ -1,0 +1,105 @@
+body {
+  width: 100%;
+  margin: 0;
+}
+
+header {
+    background-color: orange;
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #ffff;
+}
+
+article {
+    position: relative;
+    border: solid .1em;
+    display: flex;
+    margin-top: 1em;
+    width: 60em;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+}
+
+.gegevens-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.meerinfo {
+    /* display: none; */
+    vertical-align: left;
+}
+
+.gegevens {
+    display: inline-block;
+    vertical-align: top;
+    visibility: visible;
+}
+
+.gegevens_not_visible {
+  visibility: hidden;
+}
+
+button,
+button::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+button {
+  background: none;
+  border: 3px solid #6F5E4F;
+  border-radius: 5px;
+  color: #6F5E4F;
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 1em;
+  padding: .5em .5em;
+  position: relative;
+  text-transform: uppercase;
+}
+
+button::before,
+button::after {
+  background: #D4AF68;
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+button:hover {
+  color: #FFFF;
+  border: 3px solid #D4AF68;
+}
+
+.btn-2::after {
+  height: 0;
+  left: 50%;
+  top: 50%;
+  width: 0;
+}
+
+.btn-2:hover:after {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+form {
+    display: inline-block;
+    background-color: white;
+    font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+}
