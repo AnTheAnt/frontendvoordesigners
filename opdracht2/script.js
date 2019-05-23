@@ -21,6 +21,21 @@ images[2] = document.querySelector('.img3');
 images[3] = document.querySelector('.img4');
 images[4] = document.querySelector('.img5');
 
+var body = document.querySelector('body');
+body.onkeydown = arrowFunction;
+
+function arrowFunction(e){
+  var key_code = e.which||e.KeyCode;
+    switch(key_code){
+      case 37: //left arrow
+            slideLeft();
+            break;
+      case 39: //right arrow
+            slideRight();
+            break;
+    }
+}
+
 function slideLeft() {
   images[counter].style.display = "none";
   // counter goes to 4
@@ -41,18 +56,4 @@ function slideRight() {
     counter ++;
   }
   images[counter].style.display = "block";
-}
-
-var body = document.querySelector('body');
-
-body.addEventListener(e){
-  var key_code=e.wich||e.KeyCode;
-    switch(key_code){
-      case 37: //left arrow
-            moveLeft();
-            break;
-      case 39:
-            moveRight();
-            break;
-    }
 }
