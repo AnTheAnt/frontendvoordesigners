@@ -14,7 +14,7 @@
 
 var articleList = document.getElementsByTagName('article');
 
-for (var i=0; i<articleList.length; i++) {
+for (var i = 0; i<articleList.length; i++) {
   articleList[i].querySelector(".btn-2").addEventListener('click', updateMoreInfo);
       console.log("articleList");
 }

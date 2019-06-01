@@ -24,11 +24,14 @@ function populateHeader(jsonObj){
   header.appendChild(myH1);
 }
 
+
+
 //creating the stories
 function showMovies(jsonObj){
   // console.log(jsonObj.length);
 
 
+// creates all the elements
   for (i in jsonObj){
     var movie = jsonObj[i];
     var myArticle = document.createElement('article');
@@ -38,19 +41,65 @@ function showMovies(jsonObj){
     var myP2 = document.createElement('p');
     var myImg = document.createElement('img');
     // var myList = document.createElement('ul');
+    var button = document.createElement('button');
     var myList = document.createElement('ul');
 
+
+// give the elements a value of..
     myH2.textContent = movie['title'];
     myH3.textContent = movie['genres'];
     myP1.textContent = movie['plot'];
     myP2.textContent = movie['release_date'];
     myImg.src = movie['cover'];
-    reviews = movie['reviews'];
+    button.innerHTML = ['show reviews'];
+
+// shows reviews
+reviews = movie['reviews'];
     for (j in reviews){
       review = reviews[j];
       var listItem = document.createElement('li');
-      listItem.textContent = review['score'];
+      listItem.textContent = 'Score: ' + review['score'];
       myList.appendChild(listItem);
+
+      var listItem2 = document.createElement('li');
+      listItem2.textContent = 'Created at: ' + review['created_at'];
+      myList.appendChild(listItem2);
+    }
+
+// shows directors. Later created than the button. Therefore the value l
+  directors = movie['directors'];
+      for (l in directors){
+        director = directors[l];
+        var listItem3 = document.createElement('li');
+        listItem3.textContent = 'Director: ' + director['name'];
+        myList.appendChild(listItem3);
+      }
+
+
+
+// button to hide/show more info
+    var articleList = document.getElementsByTagName('article');
+    console.log(articleList);
+
+    var buttons = document.querySelectorAll('button');
+    for (var k = 0; k <buttons.length; k++) {
+      buttons[k].addEventListener('click', updateMoreInfo);
+      console.log('click');
+    }
+
+    // var toggle = function (meerInfo){
+    //   var meerInfo = this.parentNode.querySelector('ul');
+    //   meerInfo.classList.toggle('visible');
+    //
+    // }
+
+    function updateMoreInfo() {
+      var meerInfo = this.parentNode.querySelector('ul');
+      if (meerInfo.style.visibility == 'hidden') {
+        meerInfo.style.visibility = 'visible';
+      } else {
+        meerInfo.style.visibility = 'hidden';
+      }
     }
 
     myArticle.appendChild(myH2);
@@ -59,6 +108,9 @@ function showMovies(jsonObj){
     myArticle.appendChild(myP2);
     myArticle.appendChild(myImg);
     myArticle.appendChild(myList);
+    myArticle.appendChild(myList);
+    myArticle.appendChild(myList);
+    myArticle.appendChild(button);
 
     section.appendChild(myArticle);
     console.log(movie['genres']);
