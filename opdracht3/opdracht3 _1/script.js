@@ -20,7 +20,7 @@ request.onload = function() {
 
 function populateHeader(jsonObj){
   var myH1 = document.createElement('h1');
-  myH1.textContent = jsonObj.length + ' movies for days';
+  myH1.textContent = jsonObj.length + ' Movies to Watch';
   header.appendChild(myH1);
 }
 
@@ -46,12 +46,12 @@ function showMovies(jsonObj){
 
 
 // give the elements a value of..
-    myH2.textContent = movie['title'];
-    myH3.textContent = movie['genres'];
+    myH2.textContent = 'Titel: ' + movie['title'];
+    myH3.textContent = 'Genre: ' + movie['genres'];
     myP1.textContent = movie['plot'];
-    myP2.textContent = movie['release_date'];
+    myP2.textContent = 'Release date: ' + movie['release_date'];
     myImg.src = movie['cover'];
-    button.innerHTML = ['show reviews'];
+    button.innerHTML = ['meer info'];
 
 // shows reviews
 reviews = movie['reviews'];
