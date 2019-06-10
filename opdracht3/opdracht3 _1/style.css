@@ -3,65 +3,109 @@
   padding: 0;
 }
 
-
 body {
   font-family: helvetica;
   color: white;
-  background-color: #685D79;
+  background-color: #282923;
 }
 
+span {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  margin-left: 35%;
+  top: 5%;
+}
 
+/* Loader hides when movies are loaded by adding javascript class*/
 .loader {
-  background-color: red;
+  border: 10px solid #F4F0FF; /* white-space color */
+  border-top: 10px solid #282A23; /* purple-blue */
+  border-radius: 50%;
+  opacity: .7;
+  width: 70px;
+  height: 70px;
+  animation: spin 2s linear infinite;
+  left: 10%;
+  margin-top: 15em;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+.loader_text {
   font-size: 2em;
+  color: white;
+  margin-top: 18em;
 }
 
 .hide {
   display: none;
 }
 
+.hide2 {
+  display: none;
+}
+
+
+/* The basic structure */
 header {
   background-color: #362F19;
 }
 
-
 section {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 article {
-  background-color: #475C7B;
+  background-color: #282923;
   padding: 1em;
   padding-right: 2em;
   max-width: 30em;
 }
 
 
+/* Strong visual hieracrhie works best. The fonts are all different exept from the body text.
+The fonts are different so distinction can be made. And information can be found more easily. */
+
 h1 {
-  font-size: 3em;
+  font-size: 3.2em;
   text-align: center;
   padding-top: 1em;
   padding-bottom: .5em;
   color: #FCBB6D;
+  font-family: 'Monoton', cursive;
 }
 
 h2 {
   padding-bottom: .3em;
+  font-family: 'Squada One', cursive;
+  font-size: 2.3em;
+  line-height: 1.4em;
+}
+
+h3 {
+  font-family: 'Barlow Condensed', sans-serif;
 }
 
 p {
   max-width: 90%;
   padding-bottom: .3em;
   padding-top: .3em;
-  font-family: monospace;
+  font-family: 'Marvel', sans-serif;
   font-size: 1.1em;
 }
 
+/* Since this information is different from the in formation displayed above in the body text.
+Font size is changed to give more hierarchy */
 p:last-of-type {
   padding-top: .3em;
   padding-bottom: .3em;
+  font-size: .9em;
 }
 
 img {
@@ -69,13 +113,13 @@ img {
 }
 
 img:hover {
-  width: 96%;
+  width: 95.8%;
   transition: .7s;
 }
 
+/* Styling the more info element which provides user of more information */
 div {
     visibility: hidden;
-    /* display: none; */
     overflow: hidden;
     height: 0;
     transform: translateY(-100%);
@@ -95,7 +139,6 @@ ul {
     height: auto;
 }
 
-
 .foldin {
   height: 0;
 }
@@ -108,7 +151,10 @@ li {
 li:last-of-type {
   color: green;
 }
+/* end of styling info element */
 
+
+/*  styling CTA */
 button {
   width: 15em;
   height: 4em;
@@ -122,9 +168,7 @@ button:hover {
   background-color: #FDBB11;
   opacity: 1;
   transition: .3s;
-
 }
-
-button:active {
-  content: 'hi';
-}
+/* Appearance follows behavoir. It is an button wich changes when you hover.
+Furthermore the text displays show info, so you expect when clicking the button more info will ben shown.
+The animation duration is set to not to fast so you know it was you that triggered this action. */
