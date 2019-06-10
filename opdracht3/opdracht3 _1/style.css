@@ -148,8 +148,96 @@ li {
   font-family: helvetica;
 }
 
-li:last-of-type {
-  color: green;
+/* creating more visual hierarchy */
+li:nth-of-type(2) {
+  font-size: .8em;
+}
+li:nth-of-type(4) {
+  font-size: .8em;
+}
+li:nth-of-type(6) {
+  font-size: .8em;
+}
+li:nth-of-type(8) {
+  font-size: .8em;
+  margin-bottom: .5em;
+}
+
+
+li:nth-of-type(1) {
+  color: #FDBB11;
+  font-family: 'Work Sans', sans-serif;
+}
+li:nth-of-type(3) {
+  color: #FDBB11;
+  font-family: 'Work Sans', sans-serif;
+}
+li:nth-of-type(5) {
+  color: #FDBB11;
+  font-family: 'Work Sans', sans-serif;
+}
+li:nth-of-type(7) {
+  color: #FDBB11;
+  font-family: 'Work Sans', sans-serif;
+}
+
+li:nth-of-type(8) {
+  font-family: 'Noto Sans JP', sans-serif;
+
+}
+li:nth-of-type(9) {
+  font-family: 'Noto Sans JP', sans-serif;
+
+}
+li:nth-of-type(10) {
+  font-family: 'Noto Sans JP', sans-serif;
+
+}
+li:nth-of-type(11) {
+  font-family: 'Noto Sans JP', sans-serif;
+
+}
+li:nth-of-type(12) {
+  font-family: 'Noto Sans JP', sans-serif;
+
+}
+li:nth-of-type(13) {
+  font-family: 'Noto Sans JP', sans-serif;
+
+}
+li:nth-of-type(14) {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+li:nth-of-type(15) {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+li:nth-of-type(16) {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+li:nth-of-type(17) {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+li:nth-of-type(18) {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+li:nth-of-type(19) {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+li:nth-of-type(20) {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+li:nth-of-type(21) {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+li:nth-of-type(22) {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+li:nth-of-type(23) {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+li:nth-of-type(24) {
+  font-family: 'Noto Sans JP', sans-serif;
 }
 /* end of styling info element */
 
